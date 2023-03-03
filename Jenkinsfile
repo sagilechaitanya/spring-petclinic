@@ -1,12 +1,12 @@
 pipeline {
-  agent (chaitanya) {
+  agent ('chaitanya') {
     stages {
-      stage (vcs) {
+      stage ('vcs') {
         git url: https://github.com/sagilechaitanya/spring-petclinic.git,
             branch: jenkins
 
       }  
-      stage (build) {
+      stage ('build') {
         sh ./mvnw package
       }
     }
