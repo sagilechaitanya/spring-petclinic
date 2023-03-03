@@ -1,6 +1,4 @@
-pipeline {
-  node ('chaitanya') {
-    stages {
+node ('JDK-JDK') {
       stage('vcs') {
         git url: 'https://github.com/sagilechaitanya/spring-petclinic.git',
             branch: 'jenkins'
@@ -8,6 +6,4 @@ pipeline {
       stage('build') {
         sh './mvnw package'
       }
-    }
-  }  
-}
+    }  
