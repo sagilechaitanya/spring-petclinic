@@ -7,6 +7,6 @@ pipeline {
       }  
       stage('build') {
         sh './mvnw package'
-      }  
+  }  
   }
 }
