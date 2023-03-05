@@ -4,12 +4,12 @@ pipeline {
     stage('vcs') {
       steps{  
         git url: 'https://github.com/sagilechaitanya/spring-petclinic.git',
-          branch: 'gradle' 
+          branch: 'gradele' 
       }     
     }
     stage('gradlepackage') {
       steps{         
-        sh 'gradle build'
+        sh './gradlew build'
       }    
     }
   }  
