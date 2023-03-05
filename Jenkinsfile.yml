@@ -1,5 +1,6 @@
 pool: "Default"
-trigger: "gradele"
+trigger:
+  - gradele
 stages:
   - stage: "vcs"
     jobs:
