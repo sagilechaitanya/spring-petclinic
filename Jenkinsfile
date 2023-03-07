@@ -12,6 +12,13 @@ pipeline {
         sh './gradlew build'
       }    
     }
+    stage('artifactbuild') {
+      steps{
+        archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+        junit 'build/**/**/*.xml'
+      }
+    }
+  }
   }
   post{
     success{
@@ -19,6 +26,16 @@ pipeline {
         body: 'send it',
         to: 'sagile@gmail.com'
       
+    }optional refere line 31 
+    always{
+       archiveArtifacts artifacts: 'build/libs/**/*.jar', fingerprint: true
+       junit 'build/**/**/*.xml'
     }
   }
-}
+}  
+
+
+another method to write artifacts
+instead of usomg post (always) condition we can use stage
+
+
