@@ -12,4 +12,9 @@ stages:
                tasks: 'build'
                javaHomeOption:  'Path'
                jdkVersionOption: '1.17'
-               jdkDirectory: /usr/lib/jvm/java-17-openjdk-amd64
+               jdkDirectory: /usr/lib/jvm/java-17-openjdk-
+           - task: PublishPipelineArtifact@1
+              inputs:
+                targetPath: '$(Pipeline.Workspace)'
+                artifact: 'name'
+                publishLocation: 'pipeline'    
