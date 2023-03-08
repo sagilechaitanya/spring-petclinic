@@ -6,8 +6,8 @@ plugins {
 }
 sonarqube {
   properties {
-    property "sonar.projectKey", "sagil_springpetclinic"
-    property "sonar.organization",  "sagil"
+    property "sonar.projectKey", "suchi1_spring"
+    property "sonar.organization", "suchi1"
     property "sonar.host.url", "https://sonarcloud.io"
   }
 }

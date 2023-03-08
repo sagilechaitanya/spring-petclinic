@@ -23,8 +23,8 @@ stages:
               sonarQubeRunAnalysis: true
               sqGradlePluginVersionChoice: 'specify'
               sonarQubeGradlePluginVersion: '2.6.1'
-           - task: PublishPipelineArtifact@1
-             inputs:
-               targetPath: '$(Pipeline.Workspace)'
-               artifact: 'suchi'
-               publishLocation: 'pipeline'    
+          - task: PublishPipelineArtifact@1
+            inputs:
+              targetPath: '$(Pipeline.Workspace)'
+              artifact: 'suchi'
+              publishLocation: 'pipeline'    
